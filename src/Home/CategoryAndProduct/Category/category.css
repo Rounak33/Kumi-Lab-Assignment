@@ -1,0 +1,35 @@
+.categoryContainer{
+    width: 215px;
+}
+.wrapper{
+ position: sticky;
+    top:0px;
+}
+
+.categoryList{
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+li{
+    height: 82px;
+    Left: 40px;
+    border-radius: 10px;
+    padding: 10px, 40px, 10px, 20px;
+    align-items: center;
+    Gap: 20px;
+}
+
+span{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 100px;
+    color: #1d1d79;
+}
+
+span:hover{
+    background: #c9901d;
+}
