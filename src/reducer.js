@@ -10,6 +10,7 @@ const initialState = {
             'price':'0.69',
             'name':'Banana 1 ct',
             'weight':'18 oz'
+           
         },
         {
             'productImg':'./assets/strawberries.png',
