@@ -1,1 +1,1 @@
-export const CATEGORIES = 'CATEGORIES';
+export const ITEMS = 'ITEMS';

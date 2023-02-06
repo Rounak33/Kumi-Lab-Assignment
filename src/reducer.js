@@ -1,5 +1,5 @@
 import {
-    CATEGORIES
+    ITEMS
 } from './action';
 const initialState = {
     counter:0,
@@ -60,7 +60,7 @@ const initialState = {
 
 function reducer(state = initialState, action){
     switch(action.type){
-        case CATEGORIES:
+        case ITEMS:
             return{
                 ...state,
                 counter: state.counter+1
