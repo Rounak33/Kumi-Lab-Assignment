@@ -9,11 +9,7 @@ const initialState = {
     "Dairy & Eggs",
     "Frozen",
     "Meat & Seafood",
-    "Canned foods",
-    "Bakery",
-    "Dairy & Eggs",
-    "Frozen",
-    "Meat & Seafood",
+    
   ],
   item: [
     {
