@@ -35,7 +35,7 @@ function Produce() {
                       <img
                         className="add"
                         src={Add}
-                        style={{ height: "40px" }}
+                        style={{ height: "30px" }}
                         alt="img"
                         onClick={() => {
                           dispatch({ type: "ADD_CART_COUNT" });
@@ -46,7 +46,7 @@ function Produce() {
                       <img
                         className="minus"
                         src={Minus}
-                        style={{ height: "50px" }}
+                        style={{ height: "40px" }}
                         alt="img"
                         onClick={() => {
                           dispatch({ type: "REMOVE_CART_COUNT" });
