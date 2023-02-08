@@ -1,8 +1,10 @@
 .categoryContainer{
     width: 215px;
+    margin-top: 80px;
+    height: fit-content;
+    margin-left: 10px;
 }
 .wrapper{
- position: sticky;
     top:0px;
 }
 
