@@ -85,3 +85,22 @@ font-size: 13px;
 line-height: 140%;
 color: #B6BAC3;
 }
+
+
+
+.add{
+    margin-left: 70%;
+    margin-top: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.minus{
+    margin-left: 75%;
+    margin-top: 10px;
+
+    border-radius: 50%;
+    cursor: pointer;
+    color: aliceblue;
+}

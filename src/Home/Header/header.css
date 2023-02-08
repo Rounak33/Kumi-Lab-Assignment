@@ -33,3 +33,14 @@
     gap: 0px;
     margin-right: 15px;
 }
+
+@media only screen and (max-width: 600px){
+    .Container{
+        background: #FFF;
+        height: 80px;
+    }
+    .Wrapper{
+        height: 10vh;
+        padding: 10px 10px;
+    }
+}

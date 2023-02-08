@@ -30,6 +30,6 @@ span{
     color: #1d1d79;
 }
 
-span:hover{
+.item:hover{
     background: #c9901d;
 }

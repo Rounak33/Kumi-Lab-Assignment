@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./produce.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import Add from "../Produce/add.png";
+import Minus from "../Produce/minus.png";
 
 function Produce() {
   const categoryArray = useSelector((state) => state.categoryArray);
+  const dispatch = useDispatch();
+  const [Added, setAdded] = useState(false);
   const item = useSelector((state) => state.item);
   console.log(item[0].productImg);
+  function Click() {
+    console.log("Button Clicked");
+  }
 
   return (
     <div className="rightSideContainer">
@@ -23,16 +30,30 @@ function Produce() {
                       src={ele.productImg}
                       alt="img"
                       className="productImage"
-                    /><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    fill="green"
-                    class="circle"
-                    viewBox="0 0 16 16"
-                  >
-                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
-                  </svg>
+                    />{" "}
+                    {!Added ? (
+                      <img
+                        className="add"
+                        src={Add}
+                        style={{ height: "40px" }}
+                        alt="img"
+                        onClick={() => {
+                          dispatch({ type: "ADD_CART_COUNT" });
+                          setAdded(!Added);
+                        }}
+                      />
+                    ) : (
+                      <img
+                        className="minus"
+                        src={Minus}
+                        style={{ height: "50px" }}
+                        alt="img"
+                        onClick={() => {
+                          dispatch({ type: "REMOVE_CART_COUNT" });
+                          setAdded(!Added);
+                        }}
+                      />
+                    )}
                   </div>
                   <div className="productPrice">${ele.price}</div>
                   <div className="productName">{ele.name}</div>
@@ -40,6 +61,7 @@ function Produce() {
                 </li>
               ))}
             </div>
+            <hr className="line" />
           </li>
         ))}
       </ul>

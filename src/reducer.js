@@ -1,74 +1,90 @@
-import {
-    ITEMS
-} from './action';
+import { ADD_CART_COUNT , REMOVE_CART_COUNT } from "./action";
 const initialState = {
-    counter:0,
-    categoryArray: ['Produce','Prepared foods','Canned foods','Bakery','Dairy & Eggs','Frozen','Meat & Seafood','Canned foods','Bakery','Dairy & Eggs','Frozen','Meat & Seafood'],
-    item:[
-        {
-            'productImg': './assets/banana.png',
-            'price':'0.69',
-            'name':'Banana 1 ct',
-            'weight':'18 oz'
-           
-        },
-        {
-            'productImg':'./assets/strawberries.png',
-            'price':'0.69',
-            'name':'Straberries',
-            'weight':'1 lb'
-        },
-        {
-            'productImg':'./assets/yogurt.png',
-            'price':'0.69',
-            'name':'Yogurt',
-            'weight':'1 lb'
-        },
-        {
-            'productImg':'./assets/blackberries.png',
-            'price':'0.69',
-            'name':'Blackberries',
-            'weight':'1 lb'
-        },
-        {
-            'productImg': './assets/banana.png',
-            'price':'0.69',
-            'name':'Banana 1 ct',
-            'weight':'18 oz'
-        },
-        {
-            'productImg':'./assets/strawberries.png',
-            'price':'0.69',
-            'name':'Straberries',
-            'weight':'1 lb'
-        },
-        {
-            'productImg':'./assets/yogurt.png',
-            'price':'0.69',
-            'name':'Yogurt',
-            'weight':'1 lb'
-        },
-        {
-            'productImg':'./assets/blackberries.png',
-            'price':'0.69',
-            'name':'Blackberries',
-            'weight':'1 lb'
-        }
-    ]  
+  counter: 0,
+  categoryArray: [
+    "Produce",
+    "Prepared foods",
+    "Canned foods",
+    "Bakery",
+    "Dairy & Eggs",
+    "Frozen",
+    "Meat & Seafood",
+    "Canned foods",
+    "Bakery",
+    "Dairy & Eggs",
+    "Frozen",
+    "Meat & Seafood",
+  ],
+  item: [
+    {
+      productImg: "./assets/banana.png",
+      price: "0.69",
+      name: "Banana 1 ct",
+      weight: "18 oz",
+    },
+    {
+      productImg: "./assets/strawberries.png",
+      price: "0.69",
+      name: "Straberries",
+      weight: "1 lb",
+    },
+    {
+      productImg: "./assets/yogurt.png",
+      price: "0.69",
+      name: "Yogurt",
+      weight: "1 lb",
+    },
+    {
+      productImg: "./assets/blackberries.png",
+      price: "0.69",
+      name: "Blackberries",
+      weight: "1 lb",
+    },
+    {
+      productImg: "./assets/banana.png",
+      price: "0.69",
+      name: "Banana 1 ct",
+      weight: "18 oz",
+    },
+    {
+      productImg: "./assets/strawberries.png",
+      price: "0.69",
+      name: "Straberries",
+      weight: "1 lb",
+    },
+    {
+      productImg: "./assets/yogurt.png",
+      price: "0.69",
+      name: "Yogurt",
+      weight: "1 lb",
+    },
+    {
+      productImg: "./assets/blackberries.png",
+      price: "0.69",
+      name: "Blackberries",
+      weight: "1 lb",
+    },
+  ],
+};
 
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case ADD_CART_COUNT:
+      return {
+        ...state,
+        counter: state.counter + 1,
+      }
+
+      case REMOVE_CART_COUNT:
+      return {
+        ...state,
+        counter: state.counter - 1,
+      };
+
+
+    default:
+      return state;
+  }
 }
 
-function reducer(state = initialState, action){
-    switch(action.type){
-        case ITEMS:
-            return{
-                ...state,
-                counter: state.counter+1
-            }
-            
-        default:
-            return state
-    }
-}
-
-export default reducer
+export default reducer;
